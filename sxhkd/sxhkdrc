@@ -42,16 +42,27 @@ super + d
 ctrl + alt + s
     flameshot gui
 
+# Brightness
+XF86MonBrightness{Up,Down}
+  brightnessctl s 10{+,-}
+
 # Audio Keybindings
 
-XF86AudioRaiseVolume
-        amixer -c 1 -- sset Master 2db+
+# XF86AudioRaiseVolume
+#         amixer -c 1 -- sset Master 2db+
 
-XF86AudioLowerVolume
-        amixer -c 1 -- sset Master 2db-
+# XF86AudioLowerVolume
+#         amixer -c 1 -- sset Master 2db-
+
+# XF86AudioMute
+#         amixer -c 1 -- sset Master toggle
+
+XF86Audio{Raise,Lower}Volume
+  pulsemixer --change-volume {+,-}10
 
 XF86AudioMute
-        amixer -c 1 -- sset Master toggle
+  pulsemixer --toggle-mute
+
 
 alt + d
         amixer -c 1 -- sset Master 2db+

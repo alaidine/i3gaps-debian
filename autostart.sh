@@ -13,3 +13,6 @@ dunst &
 
 # sxhkd
 sxhkd -c ~/.config/i3/sxhkd/sxhkdrc &
+
+# Xressources
+xrdb -merge ~/.Xressources
